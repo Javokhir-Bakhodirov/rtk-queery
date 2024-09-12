@@ -1,0 +1,20 @@
+html {
+	overflow-y: scroll;
+}
+
+.ant-menu-item-selected {
+	background: transparent !important  ;
+}
+
+.active {
+	background: #1890ff !important;
+	padding: 24px;
+}
+
+.nav-link {
+	padding: 24px;
+}
+
+.ant-menu {
+	justify-content: start;
+}
