@@ -4,7 +4,7 @@ import { useGetProductsQuery } from "../../api/productsApi";
 import Card from "../../components/card/Card";
 import { useDispatch, useSelector } from "react-redux";
 import { setProducts } from "../../store/slice/productsSlice";
-
+import { FloatButton } from "antd";
 const Products = () => {
 	const { data, isSuccess } = useGetProductsQuery();
 	const dispatch = useDispatch();
@@ -28,6 +28,8 @@ const Products = () => {
 					))}
 				</div>
 			</Container>
+
+			<FloatButton.BackTop />
 		</section>
 	);
 };

@@ -8,6 +8,10 @@ const Card = ({ product }) => {
 	const [form] = Form.useForm();
 	const [editProduct] = useEditProductMutation();
 
+	const preImg = product.images[0];
+	const img = JSON.stringify(preImg).split('"')[2];
+	console.log(img);
+
 	const showModal = () => {
 		setIsModalOpen(true);
 		form.setFieldsValue({
@@ -35,7 +39,7 @@ const Card = ({ product }) => {
 		<div className="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 ease-in-out">
 			<div className="img-wrapper">
 				<img
-					src={product.image}
+					src={img}
 					alt={product.title}
 					className="w-full h-64 object-cover"
 				/>
